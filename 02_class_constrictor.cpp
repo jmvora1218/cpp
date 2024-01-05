@@ -5,18 +5,18 @@
 using namespace std;
 
 class person {
-	// class member 
+	// class/data member 
 	string name;
 	int id;
 	char *last_name;
 
 public:
 
-	//default constrictor
+	//default constrictor // member function
 	person() {
 	}
 	
-	//parmeterized constrictor 
+	//parmeterized constrictor // member function
 	person(string name,int id, char *last_name) : name(name),id(id) {
 		this->last_name = new char[20];
 		strcpy(this->last_name,last_name);
