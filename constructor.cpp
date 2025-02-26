@@ -22,7 +22,8 @@ class car{
     car(){
         cout << "from default constructor. \n" ;
     }
-
+    
+    //parameterized constructor
     car(int model, string name, string regNumber){
         this->model =  model;
         this->name = name;
@@ -31,20 +32,20 @@ class car{
 
     private:
         string regNumber;
-
 };
 
 int main(){
 
     car car1;
-    car car2(2019,"maruti","jk01");
-
-    car2.getValues();
+    car car2(2019,"maruti","jk01");  // parameterized constructor
+    car car3(car2);             // copy constructor 
     
-    car2.setValues();
-    car2.getValues();
-    
+    car1 = car2;        // copy assignment 
 
+    car1.getValues();
+    car2.getValues();
+    car3.getValues();
+    
     // //car1.setValues(2015, "Maruti","KA03ed0001");
    
 }
